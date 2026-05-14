@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laundry System</title>
+    <link rel="stylesheet" href="carwash.css">
+</head>
+
+<body>
+
+    <h1>🧺 Laundry Booking System</h1>
+
+    <!-- Username -->
+    <input id="username" placeholder="Enter your name">
+    <button onclick="saveUsername()">Save</button>
+    <h3 id="welcome"></h3>
+
+    <hr>
+
+    <!-- Booking Inputs -->
+    <input id="customerId" placeholder="Customer ID">
+    <input id="name" placeholder="Customer Name">
+    <input id="phone" placeholder="Phone Number">
+
+    <select id="category">
+  <option value="Clothes">Clothes</option>
+  <option value="Blankets">Blankets</option>
+  <option value="Carpet">Carpet</option>
+</select>
+
+    <select id="service">
+  <option value="wash">Wash</option>
+  <option value="iron">Iron</option>
+</select>
+
+    <input id="quantity" type="number" placeholder="Quantity">
+    <input id="bookingTime" type="datetime-local">
+
+    <select id="type">
+  <option value="Delivery">Delivery</option>
+  <option value="Pickup">Pickup</option>
+</select>
+
+    <button id="addBtn">Add Booking</button>
+
+    <br><br>
+
+    <input id="search" placeholder="Search..." onkeyup="searchOrders()">
+
+    <br><br>
+
+    <button onclick="filterOrders('All')">All</button>
+    <button onclick="filterOrders('Pending')">Pending</button>
+    <button onclick="filterOrders('Done')">Done</button>
+
+    <button onclick="Theme()">🌙 Theme</button>
+    <button onclick="clearAll()">Clear All</button>
+
+    <h3>Total Orders: <span id="count">0</span></h3>
+    <h3>Total Money: <span id="total">0</span>$</h3>
+
+    <!-- Location -->
+    <h3>📍 Our Location</h3>
+    <iframe src="https://maps.google.com/maps?q=Egypt&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+    <!-- Orders -->
+    <div id="ordersList"></div>
+
+    <script src="carwash.js"></script>
+</body>
+
+</html>

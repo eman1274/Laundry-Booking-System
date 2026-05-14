@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma;
+    background: linear-gradient(135deg, #1f2937, #dcd7d1);
+    color: #f9fafb;
+    text-align: center;
+    padding: 70px;
+}
+
+
+/* Inputs */
+
+input,
+select {
+    width: 70%;
+    max-width: 800px;
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 70px;
+    border: none;
+    outline: none;
+    background: #374151;
+    color: rgb(209, 193, 193);
+}
+
+
+/* Buttons */
+
+button {
+    display: block;
+    width: 90%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #cfcf49;
+    color: rgb(213, 15, 15);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #9e9772;
+    transform: scale(1.05);
+}
+
+
+/* Cards */
+
+.card {
+    background: #1f2937;
+    margin: 15px auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+
+/* Hover Effect */
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Expand Animation */
+
+.card.active {
+    background: #c0b597;
+    transform: scale(1.02);
+}
+
+
+/* Hidden Details */
+
+.details {
+    max-height: 070px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.card.active .details {
+    max-height: 8800px;
+}
+
+
+/* Fade animation */
+
+.card {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Dark mode */
+
+.dark {
+    background: #ef7b7b;
+}
+
+iframe {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 18px;
+    margin-top: 70px;
+}
